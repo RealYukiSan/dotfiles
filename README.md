@@ -67,6 +67,8 @@ Script and aliases:
 - screen off
 
 ```shell
-alias screenoff="xset dpms force suspend", see also (https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
+alias screenoff="xset dpms force suspend" 
 ```
+
+see also, [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
 
