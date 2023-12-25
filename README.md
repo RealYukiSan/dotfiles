@@ -1,7 +1,10 @@
 Summarize My DWM's dot files (not riced yet):
 
 ## Note for my workspace desktop environment
-generate the package list by the following command:
+
+- useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
+
+- generate the package list by the following command:
 
 ```shell
 pacman -Qeq > pkglist.txt
