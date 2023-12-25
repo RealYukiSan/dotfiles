@@ -19,7 +19,7 @@ paru -S --needed - < comm -13 <(pacman -Slq | sort) <(sort pkglist.txt)
 ## Packages
 
 Utility:
-- Clipboard: ?
+- Clipboard terminal interface: xclip
 - Screenshot: scrot
 
 File Media:
@@ -66,10 +66,6 @@ Configuration:
 Script and aliases:
 - incognito (wip: with tor support) shell script
 - screen off
-
-```shell
-alias screenoff="xset dpms force suspend" 
-```
 
 see also, [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
 
