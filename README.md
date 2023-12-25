@@ -36,6 +36,7 @@ Appearance:
 - Terminal emulator: st
 - Shell: bash
 - Application launcher: dmenu
+- Resource monitor: btop
 - File/code editor: neovim/nvim
 - Widget: ?
 
