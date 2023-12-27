@@ -1,9 +1,9 @@
 Summarize My DWM's dot files (not riced yet):
 
 ## Note for my workspace desktop environment
-
+- no need for file-system snapshot, just backup the pacman database list instead.
+- untracked software are installed inside /opt directory
 - useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
-
 - generate the package list by the following command:
 
 ```shell
@@ -30,7 +30,9 @@ File Media:
 - Video player: MPV
 
 Network and social media:
-- qbittorrent
+- VPN client: openconnect
+- SSH client: openssh
+- BitTorrent client: qbittorrent
 - Browser: ungoogled chromium
 - Telegram
 
@@ -48,8 +50,7 @@ System:
 - Bluetooth: bluez
 - Audio: pipewire (pactl using this)
 - Brightness: brightnessctl
-- Network connection: networkmanager-iwd (from aur)
-- SSH: openssh
+- Network management: networkmanager-iwd (from aur)
 - AUR package manager: paru-bin
 
 Core:
@@ -65,6 +66,9 @@ Core:
 
 Configuration:
 - reddit hosts file
+- .bashrc file
+- .xinitrc file
+- .inputrc file
 
 Script and aliases:
 - incognito (wip: with tor support) shell script
