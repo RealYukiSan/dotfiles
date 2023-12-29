@@ -3,7 +3,6 @@ Summarize My DWM's dot files (not riced yet):
 ## Note for my workspace desktop environment
 - no need for file-system snapshot, just backup the pacman database list instead.
 - untracked software are installed inside /opt directory
-- useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
 - generate the package list by the following command:
 
 ```shell
@@ -62,17 +61,8 @@ Core:
 - git
 - xorg
 
-## Additional custom setting
+## References
 
-Configuration:
-- reddit hosts file
-- .bashrc file
-- .xinitrc file
-- .inputrc file
-
-Script and aliases:
-- incognito (wip: with tor support) shell script
-- screen off
-
-see also, [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
-
+- [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
+- why there's PowerTunnel folder? see [this chat](https://t.me/GNUWeeb/883581)
+- useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
