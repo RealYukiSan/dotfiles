@@ -1,0 +1,13 @@
+XTerm*selectToClipboard: true
+xterm*faceName: JetBrainsMono Nerd Font Mono
+xterm*faceSize: 12
+XTerm*rightScrollBar: false
+XTerm*ScrollBar: false
+XTerm*scrollTtyOutput: false
+XTerm*VT100.Translations: #override \
+      Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n\
+      Shift Ctrl<Key>V: insert-selection(PRIMARY) \n\
+      Shift<Btn1Down>: select-start() \n\
+      Shift<Btn1Motion>: select-extend() \n\
+      Shift<Btn1Up>: select-end(CLIPBOARD) \n\
+
