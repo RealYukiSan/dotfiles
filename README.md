@@ -1,6 +1,7 @@
 Summarize My DWM's dot files (not riced yet):
 
 ## Note for my workspace desktop environment
+- use symlink to links your configuration in order to keep up to date with the remote repository and synchronized (keep in mind the generated link not deleted automatically when you delete the target, you free to delete those broken symlink by using [find command](https://linuxize.com/post/how-to-remove-symbolic-links-in-linux/#find-and-delete-broken-symbolic-links))
 - no need for file-system snapshot, just backup the pacman database list instead.
 - untracked software are installed inside /opt directory and symlinked to bin directory
 - maintain your custom packages, [Preserve modified packages](https://wiki.archlinux.org/title/Arch_build_system#Preserve_modified_packages)

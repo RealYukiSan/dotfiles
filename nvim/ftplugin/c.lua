@@ -1,5 +1,4 @@
 local root_files = {
-  '.c',
   '.clangd',
   '.clang-tidy',
   '.clang-format',
