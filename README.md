@@ -2,7 +2,8 @@ Summarize My DWM's dot files (not riced yet):
 
 ## Note for my workspace desktop environment
 - no need for file-system snapshot, just backup the pacman database list instead.
-- untracked software are installed inside /opt directory
+- untracked software are installed inside /opt directory and symlinked to bin directory
+- maintain your custom packages, [Preserve modified packages](https://wiki.archlinux.org/title/Arch_build_system#Preserve_modified_packages)
 - generate the package list by the following command:
 
 ```shell
@@ -25,32 +26,44 @@ Utility:
 - Screenshot: scrot
 
 File Media:
+- File explorer: netrw (installed, default on neovim)
 - Image viewer: nsxiv
 - Video player: MPV
+- Image editor: GIMP
+- Mic noise reducer: noisetorch
+- Video screen recording: OBS studio
 
-Network and social media:
+Network-related software:
+- network packet analysis: wireshark
 - VPN client: openconnect
 - SSH client: openssh
 - BitTorrent client: qbittorrent
-- Browser: ungoogled chromium
+- Surface on the internet: ungoogled chromium browser
+
+Social Media:
 - Telegram
 
 Appearance:
-- File manager: nnn (TUI-based)
-- Terminal emulator: st
-- Shell: bash
-- Application launcher: dmenu
+- Terminal emulator: st (installed, default on DWM)
+- Shell: bash (installed, default)
+- Application launcher: dmenu (installed, default on DWM)
 - Resource monitor: btop
-- File/code editor: neovim/nvim
 - Widget: ?
 
+developer tools:
+- version control system: git
+- code editor: neovim
+- IDE: android studio (barely used though)
+
 System:
+- Audio server: pipewire and pulse audio
 - Notify daemon: dunst
 - Bluetooth: bluez
 - Audio: pipewire (pactl using this)
 - Brightness: brightnessctl
 - Network management: networkmanager-iwd (from aur)
 - AUR package manager: paru-bin
+- xdg-open features the "open file with x program"
 
 Core:
 - linux
@@ -58,11 +71,11 @@ Core:
 - intel-ucode
 - base
 - base-devel
-- git
 - xorg
 
 ## References
-
 - [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
 - why there's PowerTunnel folder? see [this chat](https://t.me/GNUWeeb/883581)
 - useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
+- [crxviewer](https://crxviewer.com/)
+- [new temporary chrome session](https://t.me/c/1987506309/1603/3351)
