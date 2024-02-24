@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -18,4 +14,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-PATH="/home/reyuki/Android/Sdk/ndk/26.2.11394342/:/home/reyuki/Android/Sdk/cmdline-tools/latest/bin/:/home/reyuki/Android/Sdk/platform-tools/:/home/reyuki/Android/Sdk/build-tools/34.0.0:$PATH"
+export PATH="/home/reyuki/Android/Sdk/ndk/26.2.11394342/:/home/reyuki/Android/Sdk/cmdline-tools/latest/bin/:/home/reyuki/Android/Sdk/platform-tools/:/home/reyuki/Android/Sdk/build-tools/34.0.0:$PATH"
+#export LD_LIBRARY_PATH="/usr/local/lib"
+
