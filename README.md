@@ -74,9 +74,13 @@ Core:
 - base-devel
 - xorg
 
+## For fresh install dwm
+Just clone the dwm-git from aur and place it under home dir then run the auto symlink script, and as usual, build and install using makepkg
+
 ## References
 - [how to suspend](https://askubuntu.com/questions/1792/how-can-i-suspend-hibernate-from-command-line)
 - why there's PowerTunnel folder? see [this chat](https://t.me/GNUWeeb/883581)
 - useful tips on privacy concern: [how to installing chrome extension without login](https://superuser.com/questions/633706/how-to-install-extensions-in-chrome-without-a-google-account)
 - [crxviewer](https://crxviewer.com/)
 - [new temporary chrome session](https://t.me/c/1987506309/1603/3351)
+- [seputar dwm](https://bandithijo.dev/blog/dwm-window-manager-anti-ribet)

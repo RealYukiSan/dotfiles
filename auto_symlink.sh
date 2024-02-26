@@ -12,7 +12,8 @@ ln -vsdf $absolute_path/nvim ~/.config/nvim
 ln -vsf $absolute_path/.bashrc ~/.bashrc
 ln -vsf $absolute_path/.inputrc ~/.inputrc
 ln -vsf $absolute_path/.Xresources ~/.Xresources
-ln -vsf $absolute_path/.xinitrc ~/.xinitrc
+ln -vsf $absolute_path/dwm/.xinitrc ~/.xinitrc
+# ln -vsf $absolute_path/dwm/config.h ~/dwm-git/config.h
 sudo ln -vsf $absolute_path/hosts /etc/hosts
 # sudo ln -vsdf $absolute_path/download_list/download.sh /usr/local/bin/download.sh
 sudo ln -vsf $absolute_path/screenshot.sh /usr/local/bin/screenshot.sh
