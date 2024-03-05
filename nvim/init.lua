@@ -1,7 +1,16 @@
--- see :help normal-index to avoid conflict on mapping keybinding
--- and :help keycodes to see the meaning of symbol
--- https://www.reddit.com/r/vim/comments/6388fz/comment/dfs2s4o/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
--- see loaded vim or lua file by :scriptnames
+--[[ Useful note:
+see :help normal-index to avoid conflict on mapping keybinding
+and :help keycodes to see the meaning of symbol
+- https://www.reddit.com/r/vim/comments/6388fz/comment/dfs2s4o
+- https://t.me/VimID/1/50506
+
+see loaded vim or lua file by :scriptnames
+
+7 sets of mapping, see :help map and :help index for table of contents
+also include EX commands table which is sorted alphabetically
+
+open :h jargon to see general terms, :h tabpage also related
+--]]
 
 local opts = { noremap=true, silent=true }
 
@@ -32,7 +41,9 @@ local function goto()
 	vim.diagnostic.goto_next(nil)
 end
 
--- for goto file use gf or <C-]> (jump to a subject), goto link website use gx
+-- for goto file use gf or <C-]>
+-- (jump to a subject, also handy for navigating on :Man)
+-- and for goto link website use gx
 vim.keymap.set('v', '<C-g>', goto, opts)
 
 vim.keymap.set('v', '<C-y>', '"+y', opts)
@@ -81,7 +92,31 @@ lsp['emmet_ls'].setup {
 	capabilities = capabilities,
 }
 
+local runtime_path = vim.split(package.path, ";")
+runtime_path[#runtime_path + 1] = "?.lua"
+
+lsp['lua_ls'].setup {
+	cmd = { 'lua-language-server' },
+	settings = {
+		Lua = {
+			diagnostics = { globals = { "vim" } },
+			format = { enable = false },
+			hint = { enable = true, setType = true },
+			runtime = {
+				path = runtime_path,
+				version = "LuaJIT",
+			},
+			telemetery = { enable = false },
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("lua", true),
+				preloadFileSize = 1000,
+			}
+		},
+	},
+}
+
 lsp['clangd'].setup({
 	filetypes = { 'c' },
 	cmd = {'clangd'},
 })
+
