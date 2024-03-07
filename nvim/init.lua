@@ -69,18 +69,30 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
-		['<C-k>'] = cmp.mapping.scroll_docs(4),
-		['<C-j>'] = cmp.mapping.scroll_docs(-4),
+		['<C-b>'] = cmp.mapping.scroll_docs(4),
+		['<C-f>'] = cmp.mapping.scroll_docs(-4),
 		['<CR>'] = cmp.mapping.confirm({ select = true })
 	})
 })
 
+vim.keymap.set({"i"}, "<C-K>", function() snippet.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-L>", function() snippet.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() snippet.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+	if snippet.choice_active() then
+		snippet.change_choice(1)
+	end
+end, {silent = true})
+
+--[[ see issue terminal emulator and nvim-cmp on https://t.me/VimID/1/50531
 cmp.setup.cmdline({ '/', '?' }, {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
 		{ name = 'buffer' }
 	}
 })
+--]]
 
 -- unlike clangd, emmet_ls seems not support omnifunc for the auto-completion, therefore we need to utilize it with nvim-cmp
 lsp['emmet_ls'].setup {

@@ -1,5 +1,6 @@
 -- install the dependencies plugin/package by :luafile install.lua
--- you need install some dependency manually: emmet_ls, clangd, lua-language-server
+-- you need install some dependency manually:
+-- emmet_ls, clangd, lua-language-server 
 vim.cmd([[
 packadd minpac
 
