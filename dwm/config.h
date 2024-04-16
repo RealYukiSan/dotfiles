@@ -64,8 +64,15 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *brighter[] = { "brightnessctl", "set", "2%+", NULL };
 static const char *dimmer[] = { "brightnessctl", "set", "2%-", NULL };
 
+static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,			XK_F11	,  spawn,	   {.v = downvol } },
+	{ MODKEY,	 		XK_F9	,  spawn,	   {.v = mutevol } },
+	{ MODKEY,	 		XK_F12	,  spawn,	   {.v = upvol   } },
 	{ 0,		XF86XK_MonBrightnessDown,  spawn,	   {.v = dimmer } },
 	{ 0,		  XF86XK_MonBrightnessUp,  spawn,	   {.v = brighter } },
 	{ ShiftMask,			XK_Print,  spawn,	   SHCMD("screenshot_select.sh") },
