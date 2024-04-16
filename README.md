@@ -85,5 +85,3 @@ Just clone the dwm-git from aur and place it under home dir then run the auto sy
 - [new temporary chrome session](https://t.me/c/1987506309/1603/3351)
 - [seputar dwm](https://bandithijo.dev/blog/dwm-window-manager-anti-ribet)
 
-## Wondering
-how to make the bash feature reverse search lookup into another custom history file as described in this commit 42344509f7497f8f0adf1db4fca38c39cbfd5e67 ?
