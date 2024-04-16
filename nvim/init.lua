@@ -14,6 +14,7 @@ open :h jargon to see general terms, :h tabpage also related
 
 local opts = { noremap=true, silent=true }
 
+vim.opt.gp = "git grep -n"
 vim.g.mapleader = ","
 
 -- not work properly
@@ -44,12 +45,13 @@ end
 -- for goto file use gf or <C-]>
 -- (jump to a subject, also handy for navigating on :Man)
 -- and for goto link website use gx
-vim.keymap.set('v', '<C-g>', goto, opts)
+vim.keymap.set('n', '<C-g>', goto, opts)
 
 vim.keymap.set('v', '<C-y>', '"+y', opts)
 vim.keymap.set('v', '<C-p>', '"+gP', opts)
 
 vim.cmd('packadd nvim-cmp')
+vim.cmd('set path+=**')
 
 local cmp = require'cmp'
 local lsp = require'lspconfig'
@@ -99,6 +101,7 @@ lsp['emmet_ls'].setup {
 	cmd = { 'emmet-ls', '--stdio' },
 	filetypes = {
 		"css",
+		"php",
 		"html"
 	},
 	capabilities = capabilities,
@@ -128,7 +131,8 @@ lsp['lua_ls'].setup {
 }
 
 lsp['clangd'].setup({
-	filetypes = { 'c' },
+	filetypes = { 'c', 'h' },
 	cmd = {'clangd'},
 })
+
 
