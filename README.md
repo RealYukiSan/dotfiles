@@ -20,6 +20,11 @@ paru -S --needed - < comm -13 <(pacman -Slq | sort) <(sort pkglist.txt)
 
 [references](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Install_packages_from_a_list)
 
+unset the HISTFILE if you want temporary disable history feature, and export the HISTFILE variable to re-enable it.
+try echo the variable to check the value
+
+or just simply use `set` command [as alternative](https://unix.stackexchange.com/questions/10922/temporarily-suspend-bash-history-on-a-given-shell) to easier toggle it.
+
 ## Packages
 
 Utility:
