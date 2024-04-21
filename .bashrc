@@ -46,3 +46,4 @@ export HISTFILE=~/.bash_eternal_history
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+cd ~
