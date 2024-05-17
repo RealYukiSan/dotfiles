@@ -1,8 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+alias ls='ls --color=always'
+alias grep='grep --color=always'
 PS1='[hemlo@\h \W]\$ '
 alias screenoff="xset dpms force suspend"
 alias chromium_proxy='chromium --proxy-server="http://127.0.0.1:8085" --ignore-certificate-errors-spki-list --incognito'
@@ -42,12 +42,14 @@ HISTTIMEFORMAT="[%F %T] "
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
 HISTFILE=~/.bash_eternal_history
 
+alias dedup='history -n; history -w; history -c; history -r;'
+
 # https://askubuntu.com/a/667787
 HISTCONTROL=ignoredups:ignorespace:erasedups
 shopt -s histappend
 shopt -s cmdhist
 function historymerge {
-    history -n; history -w; history -c; history -r;
+    dedup
 }
 trap historymerge EXIT
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
