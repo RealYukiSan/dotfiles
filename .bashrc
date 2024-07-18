@@ -12,10 +12,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-ANDROID_SDK="/home/reyuki/Android/Sdk"
+export ANDROID_SDK="/home/reyuki/Android/Sdk"
 
-export PATH="$ANDROID_SDK/ndk/26.2.11394342/:$ANDROID_SDK/cmdline-tools/latest/bin/:$ANDROID_SDK/platform-tools/:$ANDROID_SDK/build-tools/34.0.0:/opt/VSCode-linux-x64/bin/:$PATH"
-#export LD_LIBRARY_PATH="/usr/local/lib"
+export PATH="$ANDROID_SDK/ndk/26.2.11394342/:$ANDROID_SDK/cmdline-tools/latest/bin/:$ANDROID_SDK/platform-tools/:/opt/android-studio/plugins/Kotlin/kotlinc/bin:$ANDROID_SDK/build-tools/34.0.0:/opt/VSCode-linux-x64/bin/:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export LD_LIBRARY_PATH="/usr/local/lib"
 export EDITOR='nvim' # for git editor
 
 # pnpm
@@ -53,3 +54,4 @@ function historymerge {
 }
 trap historymerge EXIT
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
