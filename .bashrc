@@ -1,8 +1,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source ./.aliasrc
-source ./.variablerc
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+source "$scriptDir/.aliasrc"
+source "$scriptDir/.variablerc"
 
 # https://superuser.com/a/664061/1867794
 # Eternal bash history.
