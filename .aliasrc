@@ -1,0 +1,7 @@
+alias ls='ls --color=always'
+alias grep='grep --color=always'
+PS1='[hemlo@\h \W]\$ '
+alias screenoff="xset dpms force suspend"
+alias chromium_proxy='chromium --proxy-server="http://127.0.0.1:8085" --ignore-certificate-errors-spki-list --incognito'
+alias PowerTunnel='java -jar /opt/PowerTunnel/PowerTunnel.jar -console'
+
