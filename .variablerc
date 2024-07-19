@@ -5,6 +5,8 @@ fi
 # Android PATH variable
 BUILD_VER=`ls -v ~/Android/Sdk/build-tools/ | tail -z -n 1`
 PATH="$PATH:~/Android/Sdk/platform-tools"
+PATH="$PATH:/opt/android-studio/jbr/bin"
+PATH="$PATH:~/Android/Sdk/cmdline-tools/latest/bin"
 PATH="$PATH:~/Android/Sdk/emulator"
 PATH="$PATH:~/Android/Sdk/build-tools/$BUILD_VER"
 
