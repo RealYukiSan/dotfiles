@@ -2,6 +2,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Local binaries
+PATH="$PATH:~/.local/bin"
+
 # Android PATH variable
 BUILD_VER=`ls -v ~/Android/Sdk/build-tools/ | tail -z -n 1`
 PATH="$PATH:~/Android/Sdk/platform-tools"
