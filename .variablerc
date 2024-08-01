@@ -7,7 +7,7 @@ PATH="$PATH:~/.local/bin"
 PATH="$PATH:~/go/bin"
 
 # Android PATH variable
-BUILD_VER=`ls -v ~/Android/Sdk/build-tools/ | tail -z -n 1`
+BUILD_VER=`ls --color=never ~/Android/Sdk/build-tools/ | tail -n 1`
 PATH="$PATH:~/Android/Sdk/platform-tools"
 PATH="$PATH:/opt/android-studio/jbr/bin"
 PATH="$PATH:~/Android/Sdk/cmdline-tools/latest/bin"
