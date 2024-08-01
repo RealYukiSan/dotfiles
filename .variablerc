@@ -4,6 +4,7 @@ fi
 
 # Local binaries
 PATH="$PATH:~/.local/bin"
+PATH="$PATH:~/go/bin"
 
 # Android PATH variable
 BUILD_VER=`ls -v ~/Android/Sdk/build-tools/ | tail -z -n 1`
