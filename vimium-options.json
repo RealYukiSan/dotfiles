@@ -1,0 +1,26 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap x\nunmap X\nunmap r\nunmap <c-e>\nunmap f\nmap F LinkHints.activateMode",
+  "settingsVersion": "2.1.2",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://web.telegram.org/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://developer.mozilla.org/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://remotedesktop.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://app.diagrams.net/*"
+    }
+  ]
+}
