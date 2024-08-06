@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# enable forward search (C-s)
+stty -ixon
+
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
 source "$scriptDir/.aliasrc"
