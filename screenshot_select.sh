@@ -1,2 +1,2 @@
 #!/bin/sh
-scrot ~/Pictures/%m-%d-%Y.png --select --line mode=edge
+scrot --select --line mode=edge - | xclip -selection clipboard -target image/png
