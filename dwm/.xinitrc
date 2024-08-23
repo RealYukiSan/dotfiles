@@ -9,7 +9,7 @@ do
 		SPEAKER="  $VOLUME";
 		else SPEAKER="  $VOLUME";
 	fi
-	ROOT="$SPEAKER   $BATT% - $(date)"
+	ROOT="$SPEAKER   $BATT% - $(date +"%a %b %d %I:%M:%S %p %Z %Y")"
 	xsetroot -name "$ROOT"
 	sleep 1
 done &
