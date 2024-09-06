@@ -9,12 +9,12 @@ PATH="$PATH:~/.local/bin"
 PATH="$PATH:~/go/bin"
 
 # Android PATH variable
-export ANDROID_SDK="$HOME/Android/Sdk"
-BUILD_VER=`ls --color=never $ANDROID_SDK/build-tools/ | tail -n 1`
-PATH="$PATH:$ANDROID_SDK/platform-tools"
-PATH="$PATH:$ANDROID_SDK/cmdline-tools/latest/bin"
-PATH="$PATH:$ANDROID_SDK/emulator"
-PATH="$PATH:$ANDROID_SDK/build-tools/$BUILD_VER"
+export ANDROID_HOME="$HOME/Android/Sdk"
+BUILD_VER=`ls --color=never $ANDROID_HOME/build-tools/ | tail -n 1`
+PATH="$PATH:$ANDROID_HOME/platform-tools"
+PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+PATH="$PATH:$ANDROID_HOME/emulator"
+PATH="$PATH:$ANDROID_HOME/build-tools/$BUILD_VER"
 
 # accelerate the process of re-build LineageOS
 # https://wiki.lineageos.org/emulator
